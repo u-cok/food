@@ -2,18 +2,18 @@ gojek claim voucher gofood terbaru
 
 kode perintah
 
-pkg update
+1. pkg update
 
-pkg upgrade
+2. pkg upgrade
 
-pkg install php
+3. pkg install php
 
-pkg install curl
+4. pkg install curl
 
-pkg install git
+5. pkg install git
 
-git clone https://github.com/u-cok/food
+6. git clone https://github.com/u-cok/food
 
-cd gofood
+7. cd gofood
 
-php ks.php
+8. php ks.php
