@@ -2,10 +2,10 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red"," ========================================\n");
-echo color("green"," Auto create Gojek & Redeem voucher\n");
-echo color("green"," Creator : @U_cok (Telegram Ready apikey)\n");
+echo color("green"," Auto create Gojek & Redeem voucher	\n");
+echo color("green"," Creator : @U_cok (Telegram Ready apikey)			\n");
 echo color("green"," Version : Free			\n");
-echo color("green"," Time    : ".date('[d-m-Y] [H:i:s]')."\n");
+echo color("green"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
 echo color("red"," ========================================\n");
 
 // function change(){
@@ -52,7 +52,7 @@ echo color("red"," ========================================\n");
         echo color("green","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("red","\n===========(REDEEM VOUCHER)===========");
-		echo "\n".color("yellow","!] Claim voc GOFOOD");
+        echo "\n".color("yellow","!] Claim voc GOFOOD");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -114,7 +114,6 @@ echo color("red"," ========================================\n");
                                         $debug['text'] = $pesan;
                                         $debug['respon'] = json_decode($datas, true);
         
-         
          }else{
             echo color("red","-] Otp yang anda input salah");
             echo"\n==================================\n\n";
