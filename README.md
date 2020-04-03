@@ -17,3 +17,7 @@ kode perintah
 7. cd gofood
 
 8. php ks.php
+
+9. Claim manual dengan kode COBAGOFOOD010420A
+
+10. Promo kamu sudah bisa dipakai. Yuk, cobain!
