@@ -14,7 +14,7 @@ kode perintah
 
 6. git clone https://github.com/u-cok/food
 
-7. cd gofood
+7. cd food
 
 8. php ks.php
 
