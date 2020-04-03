@@ -1,9 +1,7 @@
-#voucher gojek claim voucher terbaru
-
-
-voucher go food
+voucher gojek claim voucher gofood terbaru
 
 kode perintah
+
 pkg update
 
 pkg upgrade
@@ -18,4 +16,4 @@ git clone https://github.com/u-cok/food
 
 cd gofood
 
-php ap.php
+php ks.php
