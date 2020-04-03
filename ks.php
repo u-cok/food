@@ -2,10 +2,10 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red"," ========================================\n");
-echo color("blue"," Auto create Gojek & Redeem voucher	\n");
-echo color("blue"," Creator : @U_cok (Telegram Ready apikey)			\n");
+echo color("blue"," Auto create Gojek & Redeem voucher\n");
+echo color("blue"," Creator : @U_cok (Telegram Ready apikey)\n");
 echo color("blue"," Version : Free			\n");
-echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
+echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."\n");
 echo color("red"," ========================================\n");
 
 // function change(){
