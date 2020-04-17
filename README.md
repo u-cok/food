@@ -16,4 +16,4 @@ kode perintah
 
 7. cd food
 
-8. php pocong.php
+8. php Pocong.php
