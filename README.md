@@ -12,11 +12,11 @@ kode perintah
 
 5. pkg install git
 
-6. git clone https://github.com/u-cok/food
+6. git clone https://github.com/pocongan/food
 
 7. cd food
 
-8. php ks.php
+8. php pocong.php
 
 9. Login CS gojek dan claim manual dengan kode COBAGOFOOD010420A
 
