@@ -17,7 +17,3 @@ kode perintah
 7. cd food
 
 8. php ks.php
-
-9. Login CS gojek dan claim manual dengan kode COBAGOFOOD010420A
-
-10. Promo sudah tidak bisa dipakai. Tunggu update vc selanjutnya
