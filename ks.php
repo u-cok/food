@@ -22,17 +22,17 @@ echo color("red"," ===================================\n");
         $nohp = str_replace(" ","",$nohp);
 
         if (!preg_match('/[^+0-9]/', trim($nohp))) {
-           if (substr(trim($nohp),0,3)=='62') {
-              $hp = trim($nohp);
-           }
-           else if (substr(trim($nohp),0,1)=='0') {
-              $hp = '62'.substr(trim($nohp),1);
+            if (substr(trim($nohp),0,3)=='62') {
+                $hp = trim($nohp);
+            }
+            else if (substr(trim($nohp),0,1)=='0') {
+                $hp = '62'.substr(trim($nohp),1);
         }
          elseif(substr(trim($nohp), 0, 2)=='62'){
-           $hp = '6'.substr(trim($nohp), 1);
+            $hp = '6'.substr(trim($nohp), 1);
         }
         else{
-           $hp = '1'.substr(trim($nohp),0,13);
+            $hp = '1'.substr(trim($nohp),0,13);
         }
     }
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
@@ -64,7 +64,7 @@ echo color("red"," ===================================\n");
         echo "\n".color("green","+] Message: ".$message);
         }else{
         echo "\n".color("red","-] Message: ".$message);
-	echo "\n".color("yellow","!] Claim voc GOFOOD A");
+		echo "\n".color("yellow","!] Claim voc GOFOOD A");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -76,8 +76,8 @@ echo color("red"," ===================================\n");
         if(strpos($gofood, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messagegofood1);
         goto goride;
-	}else{
-	echo "\n".color("red","-] Message: ".$messagegofood1);
+		}else{
+		echo "\n".color("red","-] Message: ".$messagegofood1);
         echo "\n".color("yellow","!] Claim voc GOFOOD B");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
@@ -103,10 +103,23 @@ echo color("red"," ===================================\n");
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EATLAH"}');
         $message1 = fetch_value($goride,'"message":"','"');
         if(strpos($goride, 'Promo kamu sudah bisa dipakai.')){
-	echo "\n".color("green","+] Message: ".$message1);
-	}else{
-	echo "\n".color("red","-] Message: ".$message1);
-	sleep(3);
+		echo "\n".color("green","+] Message: ".$message1);
+		}else{
+		echo "\n".color("red","-] Message: ".$message1);
+		echo "\n".color("yellow","!] Claim voc COBAINGOJEK");
+        echo "\n".color("yellow","!] Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(1);
+        }
+        sleep(3);
+        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGOJEK"}');
+        $message2 = fetch_value($goride1,'"message":"','"');
+        if(strpos($goride1, 'Promo kamu sudah bisa dipakai.')){
+		echo "\n".color("green","+] Message: ".$message2);
+        }else{
+		echo "\n".color("red","-] Message: ".$message2);
+		sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
