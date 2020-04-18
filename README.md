@@ -1,4 +1,4 @@
-gojek claim voucher gofood terbaru
+claim voucher gofood terbaru
 
 kode perintah
 
