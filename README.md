@@ -16,4 +16,4 @@ kode perintah
 
 7. cd food
 
-8. php ab.php
+8. php ks.php
