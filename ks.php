@@ -1,12 +1,12 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("red"," ===================================\n");
-echo color("blue"," Auto create Gojek & Redeem voucher	\n");
-echo color("blue"," Creator : @U_cok			\n");
-echo color("blue"," Version : Free			\n");
-echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
-echo color("red"," ===================================\n");
+echo color("blue"," ====================================\n");
+echo color("blue","| Auto create Gojek & Redeem voucher |\n");
+echo color("blue","| Creator : @U_cok                   |\n");
+echo color("blue","| Version : Free                     |\n");
+echo color("blue","| Time    : ".date('[d-m-Y] [H:i:s]')."  |\n");
+echo color("blue"," ====================================\n");
 
 // function change(){
         $nama = nama();
@@ -56,12 +56,12 @@ echo color("red"," ===================================\n");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(10);
+        sleep(1);
         }
         sleep(3);
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHMAKAN"}');
-        $message2 = fetch_value($goride1,'"message":"','"');
-        echo "\n".color("green","+] Message: ".$message2);
+        $gofood = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHMAKAN"}');
+        $message = fetch_value($gofood,'"message":"','"');
+        echo "\n".color("green","+] Message: ".$message);
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
