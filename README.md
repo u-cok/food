@@ -18,4 +18,4 @@ kode perintah
 
 8. php vc.php
 
-9. Jika vocher tidak keluar di termux claim manual
+9. Jika vocher tidak keluar, claim manual
