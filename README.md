@@ -1,4 +1,4 @@
-claim voucher gofood terbaru
+claim voucher gofood terbaru EBADAHMAKAN
 
 kode perintah
 
@@ -17,3 +17,5 @@ kode perintah
 7. cd food
 
 8. php vc.php
+
+9. Jika vocher tidak keluar di termux claim manual
