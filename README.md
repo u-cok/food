@@ -1,4 +1,4 @@
-claim voucher gofood terbaru EBADAHMAKAN
+claim voucher gofood terbaru juni
 
 kode perintah
 
@@ -16,6 +16,4 @@ kode perintah
 
 7. cd food
 
-8. php vc.php
-
-9. Jika vocher tidak keluar, claim manual
+8. php juni.php
