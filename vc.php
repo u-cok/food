@@ -1,12 +1,12 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("blue"," ====================================\n");
-echo color("blue","| Auto create Gojek & Redeem voucher |\n");
-echo color("blue","| Creator : @U_cok                   |\n");
-echo color("blue","| Version : Free                     |\n");
-echo color("blue","| Time    : ".date('[d-m-Y] [H:i:s]')."  |\n");
-echo color("blue"," ====================================\n");
+echo color("red"," ===================================\n");
+echo color("blue"," Auto create Gojek & Redeem voucher	\n");
+echo color("blue"," Creator : @U_cok			\n");
+echo color("blue"," Version : Free			\n");
+echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
+echo color("red"," ===================================\n");
 
 // function change(){
         $nama = nama();
@@ -52,17 +52,44 @@ echo color("blue"," ====================================\n");
         echo color("green","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("red","\n===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc GOFOOD");
+        echo "\n".color("yellow","!] VC PANCINGAN");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
+        sleep(15);
         }
-        sleep(3);
-        $gofood = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHMAKAN"}');
-        $message = fetch_value($gofood,'"message":"','"');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD160420A"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
-        sleep(3);
+        goto gocar;
+        }else{
+        echo "\n".color("red","+] Message: ".$message);
+	gocar:
+        echo "\n".color("yellow","!] INI VC PANCINGAN ");
+        echo "\n".color("yellow","!] Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(15);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"STAYGOFOOD201105SC"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
+        echo "\n".color("green","+] Message: ".$message);
+        goto gofood;
+        }else{
+        echo "\n".color("red","+] Message: ".$message);
+        gofood:
+        echo "\n".color("yellow","!] VC GOFOOD");
+        echo "\n".color("yellow","!] Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("yellow",".");
+        sleep(10);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD260520"}');
+        $message = fetch_value($code1,'"message":"','"');
+        echo "\n".color("green","+] Message: ".$message);
+        sleep(2);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
@@ -73,13 +100,13 @@ echo color("blue"," ====================================\n");
         $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
         $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
         echo "\n".color("yellow","!] Total voucher ".$total." : ");
-        echo color("green","1. ".$voucher1);
-        echo "\n".color("green","                     2. ".$voucher2);
-        echo "\n".color("green","                     3. ".$voucher3);
-        echo "\n".color("green","                     4. ".$voucher4);
-        echo "\n".color("green","                     5. ".$voucher5);
-        echo "\n".color("green","                     6. ".$voucher6);
-        echo "\n".color("green","                     7. ".$voucher7);
+        echo color("blue","1. ".$voucher1);
+        echo "\n".color("blue","                     2. ".$voucher2);
+        echo "\n".color("blue","                     3. ".$voucher3);
+        echo "\n".color("blue","                     4. ".$voucher4);
+        echo "\n".color("red","                     5. ".$voucher5);
+        echo "\n".color("red","                     6. ".$voucher6);
+        echo "\n".color("red","                     7. ".$voucher7);
         echo"\n";
         $expired1 = getStr1('"expiry_date":"','"',$cekvoucher,'1');
         $expired2 = getStr1('"expiry_date":"','"',$cekvoucher,'2');
@@ -102,8 +129,8 @@ echo color("blue"," ====================================\n");
                 "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36" 
                         ];
                                         
-        
-         
+         }
+         }
          }else{
             echo color("red","-] Otp yang anda input salah");
             echo"\n==================================\n\n";
