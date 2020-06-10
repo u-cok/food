@@ -1,4 +1,4 @@
-claim voucher gofood terbaru juni
+claim voucher gofood terbaru juni 2020
 
 kode perintah
 
