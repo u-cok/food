@@ -2,10 +2,10 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("red"," ===================================\n");
-echo color("blue"," Auto create Gojek & Redeem voucher	\n");
-echo color("blue"," Creator : @U_cok			\n");
-echo color("blue"," Version : Free			\n");
-echo color("blue"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
+echo color("green"," Auto create Gojek & Redeem voucher	\n");
+echo color("green"," Creator : @U_cok			\n");
+echo color("green"," Version : Free			\n");
+echo color("green"," Time    : ".date('[d-m-Y] [H:i:s]')."	\n");
 echo color("red"," ===================================\n");
 
 // function change(){
@@ -52,7 +52,7 @@ echo color("red"," ===================================\n");
         echo color("green","+] Your access token : ".$token."\n\n");
         save("token.txt",$token);
         echo color("red","\n===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] VC PANCINGAN");
+        echo "\n".color("yellow","!] PANCINGAN");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -66,7 +66,7 @@ echo color("red"," ===================================\n");
         }else{
         echo "\n".color("red","+] Message: ".$message);
 	gocar:
-        echo "\n".color("yellow","!] INI VC PANCINGAN ");
+        echo "\n".color("yellow","!] PANCING LAGI ");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -86,7 +86,7 @@ echo color("red"," ===================================\n");
         echo color("yellow",".");
         sleep(10);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD260520"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0906"}');
         $message = fetch_value($code1,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message);
         sleep(2);
