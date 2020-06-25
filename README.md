@@ -16,4 +16,4 @@ kode perintah
 
 7. cd food
 
-8. php juni.php
+8. php 22juni.php
