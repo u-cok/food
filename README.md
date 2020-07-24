@@ -16,8 +16,8 @@ git clone https://github.com/u-cok/food
 
 cd food
 
-pertama :
+pertama daftar+ambil vc20+10:
 php daftar.php (copy token nya)
 
-kedua :
+kedua ambil vc15+10+5:
 php 15.php (paste token)
